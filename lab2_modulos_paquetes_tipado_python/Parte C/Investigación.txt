@@ -1,0 +1,17 @@
+Las sugerencias de tipo permiten especificar el tipo anticipado de variables, 
+argumentos y resultados, lo que mejora la claridad y facilita la identificación 
+de fallos antes de que se ejecute el código.
+
+No son imprescindibles y no tienen efecto durante la ejecución (Python no genera 
+errores automáticamente por tipos erróneos).
+
+Utilidades como mypy, pyright y PyCharm las emplean para análisis estático y 
+autocompletado.
+
+Evitan confusiones: si alguien lee tu código, sabrá enseguida qué tipo de dato espera cada función.
+
+Menos errores: las herramientas pueden avisarte si intentas pasar un dato que no corresponde.
+
+Código más ordenado: se parece a tener una mini documentación escrita dentro del código.
+
+Mejor autocompletado: los editores de código adivinan mejor lo que quieres escribir.
