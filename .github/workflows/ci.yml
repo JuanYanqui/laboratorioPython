@@ -38,4 +38,5 @@ jobs:
 
       # 5. Ejecuta tests
       - name: Run pytest
-        run: pytest
+        run: |
+          PYTHONPATH=$(pwd)/src pytest
