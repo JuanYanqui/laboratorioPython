@@ -31,7 +31,7 @@ jobs:
 
       # 4. Ejecuta linters
       - name: Run ruff
-        run: ruff src test
+        run: ruff check src test
 
       - name: Run mypy
         run: mypy src test
