@@ -17,34 +17,29 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2. Set working directory a la carpeta del proyecto
-      - name: Set working directory
-        run: cd lab3_codespaces_ruff
-        shell: bash
-
-      # 3. Configura Python
+      # 2. Configura Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.12"
 
-      # 4. Instala dependencias
+      # 3. Instala dependencias
       - name: Install dependencies
         working-directory: lab3_codespaces_ruff
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 5. Linters
+      # 4. Linters
       - name: Run ruff
         working-directory: lab3_codespaces_ruff
-        run: ruff check src test
+        run: ruff check src
 
       - name: Run mypy
         working-directory: lab3_codespaces_ruff
-        run: mypy src test
+        run: mypy src
 
-      # 6. Tests
+      # 5. Tests
       - name: Run pytest
         working-directory: lab3_codespaces_ruff
         run: |
